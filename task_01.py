@@ -23,9 +23,8 @@ def simple_lookup(var1, var2):
         [3, 5 7]
         """
     try:
-       var1[var2] 
+        var1[var2]
     except LookUpError:
         print 'Warning: Your index/key does not exist.'
-
     return var1
 
