@@ -23,7 +23,7 @@ def simple_lookup(var1, var2):
         [3, 5 7]
         """
     try:
-        var1[var2]
+        var2['appple']
     except IndexError:
         print 'Warning: Your index does not exist.'
     except ValueError:
