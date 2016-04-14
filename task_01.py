@@ -3,7 +3,7 @@
 """Task 01 module"""
 
 
-def simple_lookup(var1, var2=None):
+def simple_lookup(var1, var2):
     """This docstring illustrates the error handling principle.
 
     Args:
@@ -25,5 +25,5 @@ def simple_lookup(var1, var2=None):
     try:
         var2[var1]
     except IndexError:
-        print 'Warning: Your index does not exist.'
+        print 'Warning: Your index/key doesn\'t exist.'
     return var1
