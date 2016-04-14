@@ -3,7 +3,7 @@
 """Task 01 module"""
 
 
-def simple_lookup(var1, var2):
+def simple_lookup(var1, var2={}):
     """This docstring illustrates the error handling principle.
 
     Args:
@@ -23,7 +23,7 @@ def simple_lookup(var1, var2):
         [3, 5 7]
         """
     try:
-        var2['appple']
+        var2[var1]
     except IndexError:
         print 'Warning: Your index does not exist.'
     except ValueError:
