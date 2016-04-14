@@ -24,7 +24,8 @@ def simple_lookup(var1, var2):
         """
     try:
         var1[var2]
-    except LookUpError:
-        print 'Warning: Your index/key does not exist.'
+    except IndexError:
+        print 'Warning: Your index does not exist.'
+    except ValueError:
+        print 'Warning: Your key does not exist.'
     return var1
-
