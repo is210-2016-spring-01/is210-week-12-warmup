@@ -4,27 +4,27 @@
 
 
 def simple_lookup(var1, var2):
-    return var1[var2]
     """This docstring illustrates the error handling principle.
 
     Args:
-        var1(mixed): A dictionary
-        var2 (empty): A empty dictionary that will not return item accessed.
-
+        var1(mixed): A dictionary or list
+        var2(mixed): An index or key
     Returns:
-        mixed: Key/value accessed or a warning statement.
+        mixed: Key/value accessed or a var1.
 
     Examples:
-        >>>simple_lookup([a:3, 5, 7], [b: 2]
+        >>>simple_lookup({'a':3, 'b':5, 'c':7}, 'd')
         Warning: Your index/key does not exist.
-        [3, 5, 7]
+        {'a':3, 'b':5, 'c':7}
 
-        >>>simple look_up([3, 5, 7], [a:1]
+        >>>simple look_up([3, 5, 7], 8)
         Warning: Your index/key does not exist.
         [3, 5, 7]
         """
     try:
-        var2[var1]
+        return var1[var2]
     except IndexError:
+        print 'Warning: Your index/key doesn\'t exist.'
+    except KeyError:
         print 'Warning: Your index/key doesn\'t exist.'
     return var1
