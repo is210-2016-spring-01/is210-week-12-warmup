@@ -14,7 +14,7 @@ def simple_lookup(var1, var2=None):
         mixed: Key/value accessed or a warning statement.
 
     Examples:
-        >>>simple_lookup([a:3, 5, 7], [1, 2]
+        >>>simple_lookup([a:3, 5, 7], [b: 2]
         Warning: Your index/key does not exist.
         [3, 5, 7]
 
