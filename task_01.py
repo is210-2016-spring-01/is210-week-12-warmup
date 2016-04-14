@@ -3,7 +3,7 @@
 """Task 01 module"""
 
 
-def simple_lookup(var1, var2={}):
+def simple_lookup(var1, var2=None):
     """This docstring illustrates the error handling principle.
 
     Args:
