@@ -4,6 +4,7 @@
 
 
 def simple_lookup(var1, var2):
+    return var1[var2]
     """This docstring illustrates the error handling principle.
 
     Args:
