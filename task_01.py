@@ -5,13 +5,13 @@
 
 def simple_lookup(var1, var2):
     var2 = [apple, grapes, oranges]
-    var1 = [break]
+    var1 = []
     z = var1.update(var2) 
     try:
         var1[dinner]
     except KeyError:
         print 'Warning: Your index/key does not exist.'
-        var1 = {breakfast: fruits}
+        var1 = [dinner]
 
     return var1
 
