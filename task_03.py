@@ -23,20 +23,17 @@ class CustomLogger(object):
     def flush(self):
         """Add messages to log."""
         handled = []
-        fhandler = open(self.logfilename, 'a')
         try:
-            for index, entry in enumerate(self.msgs):
+            fhandler = open(self.logfilename, 'a')
+        except IOError:
+            self.log('IOError logged.')
+        for index, entry in enumerate(self.msgs):
+            try:
                 fhandler.write(str(entry) + '\n')
                 handled.append(index)
-        except IOError:
-            self.log('IOError logged.')
+            except IOError:
+                self.log('IOError logged.')
+            except StandardError as sderror:
+                self.log('{0} logged.'.format(sderror))
 
-        try:
-            for index in handled[::-1]:
-                del self.msgs[index]
-        except IOError:
-            self.log('IOError logged.')
-        except StandardError as sderror:
-            self.log('{0} logged.'.format(sderror))
-        finally:
-            fhandler.close()
+        fhandler.close()
