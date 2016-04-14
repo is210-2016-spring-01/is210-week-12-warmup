@@ -20,12 +20,10 @@ def simple_lookup(var1, var2=None):
 
         >>>simple look_up([3, 5, 7], [a:1]
         Warning: Your index/key does not exist.
-        [3, 5 7]
+        [3, 5, 7]
         """
     try:
         var2[var1]
     except IndexError:
         print 'Warning: Your index does not exist.'
-    except ValueError:
-        print 'Warning: Your key does not exist.'
     return var1
