@@ -7,8 +7,8 @@ import datetime
 
 
 class InvalidAgeError(Exception):
+    """Ths class identifies invalid ages."""
     pass
-"""Ths class identifies invalid ages."""
 
 
 def get_age(birthyear):
