@@ -7,6 +7,7 @@ import time
 
 
 class CustomLogger(object):
+    """THis class creates logs."""
 
     def __init__(self, logfilename):
         self.logfilename = logfilename
