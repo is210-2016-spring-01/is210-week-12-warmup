@@ -7,7 +7,7 @@ def simple_lookup(var1, var2):
     """exception handling"""
     try:
         return var1[var2]
-    except:
+    except LookupError:
         print "Warning: Your index/key doesn't exist."
         return var1
 
