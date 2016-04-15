@@ -29,7 +29,7 @@ class CustomLogger(object):
             timestamp(integer)
         """
         if timestamp is None:
-           timestamp = time.time()
+            timestamp = time.time()
         self.msgs.append((timestamp, msg))
 
     def flush(self):
@@ -47,7 +47,6 @@ class CustomLogger(object):
                     handled.append(index)
                 except IOError:
                     self.log('I/O error. File cannot be written to.')
-       
         for index in handled[::-1]:
             del self.msgs[index]
         fhandler.close()
