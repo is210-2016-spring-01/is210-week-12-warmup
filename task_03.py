@@ -7,7 +7,7 @@ import time
 
 
 class CustomLogger(object):
-
+    """class docstring"""
     def __init__(self, logfilename):
         """constructor, initializer"""
         self.logfilename = logfilename
