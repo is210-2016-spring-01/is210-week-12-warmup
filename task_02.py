@@ -19,6 +19,7 @@ def get_age(birthyear):
     Example:
         >>>get_age(2000)
         16
+    """
     age = datetime.datetime.now().year - birthyear
     if age < 0:
         raise InvalidAgeError()
