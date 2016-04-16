@@ -10,6 +10,7 @@ class InvalidAgeError(Exception):
     """class docstring for an exception"""
     pass
 
+
 def get_age(birthyear):
     """Tests if age provided is greater than 0.
     Attributes:
